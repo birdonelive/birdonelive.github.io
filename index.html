@@ -1,24 +1,67 @@
-<center>
-  <div class="rainbow"></div>
-  <br><br>
-  <h1 style="font-family:verdana">Version 2 is coming soon...</h1>
-  <p style="font-family:verdana">www.birdone.click</p>
-</center>
-
-<style>
-  body {
-    color: #FFFFFF;
-  }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BirdOne</title>
+  <style>
+    body {
+      color: #FFFFFF;
+      margin: 0;
+      overflow: hidden;
+    }
   
-  .rainbow {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    min-height: 600px;
-    width: 100%;
-    background: #4D97FF;
-    background: linear-gradient(90deg, #4D97FF 0%, #9966FF 100%);
-    -webkit-animation: hue-rotation 45s infinite;
-    animation: hue-rotation 45s infinite;
-  }
-</style>
+    .rainbow {
+      height: 100%;
+      width: 100%;
+      background: #4D97FF;
+      background: linear-gradient(90deg, #4D97FF 0%, #9966FF 100%);
+      animation: huerot 30s infinite;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1, p {
+      font-family: Verdana;
+      text-align: center;
+      z-index: 1;
+    }
+
+    h1 {
+      margin: 0;
+  	  position: absolute;
+  	  top: 48%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+    p {
+      margin-top: auto;
+    }
+
+    @keyframes huerot {
+      0% {
+        filter: hue-rotate(0deg);
+      }
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="rainbow"></div>
+  <center>
+    <h1>Version 2 is coming soon...</h1>
+    <p>www.birdone.click</p>
+  </center>
+</body>
+</html>
